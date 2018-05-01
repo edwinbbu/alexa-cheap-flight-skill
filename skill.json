@@ -1,0 +1,56 @@
+{
+  "manifest": {
+    "publishingInformation": {
+      "locales": {
+        "en-IN": {
+          "summary": "Search for Cheapest Flight",
+          "examplePhrases": [
+            "Alexa open cheap flights",
+            "Alexa search for cheap flights",
+            "Alexa check cheap flights"
+          ],
+          "keywords": [
+            "search",
+            "flight",
+            "travel",
+            "booking",
+            "cheap",
+            "destination",
+            "arrival",
+            "time"
+          ],
+          "name": "Cheap Flight",
+          "smallIconUri": "https://s3.amazonaws.com/CAPS-SSE/echo_developer/d8dd/db87a0d933ec4772bb131333bf2fc4a9/APP_ICON?versionId=HKWSRu4m72u7EwNHelw0Vuh1pzADykbV&AWSAccessKeyId=AKIAI3X6PUXD7CU5F5BQ&Expires=1525272254&Signature=w7JMB2JZU4ta2wEeoxyTqBzAmaQ%3D",
+          "description": "Search for cheapest flight.",
+          "largeIconUri": "https://s3.amazonaws.com/CAPS-SSE/echo_developer/34a4/22ac0fd382b6469d8932fd31b3c4e2d3/APP_ICON_LARGE?versionId=73_LxfU.KeMdz3ZTUl9VjrAVjIAl4iV6&AWSAccessKeyId=AKIAI3X6PUXD7CU5F5BQ&Expires=1525272254&Signature=B5NFvOpd5eLwSJWX6y4IZd4%2B%2FMk%3D"
+        }
+      },
+      "isAvailableWorldwide": true,
+      "testingInstructions": "Alexa, open cheap flight",
+      "category": "FLIGHT_FINDERS",
+      "distributionCountries": []
+    },
+    "apis": {
+      "custom": {
+        "endpoint": {
+          "uri": "arn:aws:lambda:us-east-1:419450221165:function:bookFlight"
+        },
+        "interfaces": []
+      }
+    },
+    "manifestVersion": "1.0",
+    "privacyAndCompliance": {
+      "allowsPurchases": false,
+      "locales": {
+        "en-IN": {
+          "termsOfUseUrl": "https://google.co.in",
+          "privacyPolicyUrl": "https://google.co.in"
+        }
+      },
+      "isExportCompliant": true,
+      "containsAds": false,
+      "isChildDirected": false,
+      "usesPersonalInfo": true
+    }
+  }
+}

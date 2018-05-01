@@ -1,0 +1,268 @@
+{
+  "interactionModel": {
+    "languageModel": {
+      "invocationName": "cheap flights",
+      "intents": [
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": [
+            "how can you help me",
+            "what can you do",
+            "who are you"
+          ]
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": [
+            "thank you"
+          ]
+        },
+        {
+          "name": "Greetings",
+          "samples": [
+            "who are you",
+            "hello",
+            "hi"
+          ]
+        },
+        {
+          "name": "BookFlight",
+          "slots": [
+            {
+              "name": "date",
+              "type": "AMAZON.DATE",
+              "samples": [
+                "{date}"
+              ]
+            },
+            {
+              "name": "fromcity",
+              "type": "AMAZON.City",
+              "samples": [
+                "{fromcity}"
+              ]
+            },
+            {
+              "name": "tocity",
+              "type": "AMAZON.City"
+            },
+            {
+              "name": "class",
+              "type": "class_type",
+              "samples": [
+                "{class} class",
+                "{class}"
+              ]
+            }
+          ],
+          "samples": [
+            "book flight for {date} from {fromcity} to {tocity}",
+            "book flight for {date}",
+            "search flight",
+            "book flight",
+            "i would like to search a flight",
+            "i would like to book a flight"
+          ]
+        },
+        {
+          "name": "AMAZON.YesIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.NoIntent",
+          "samples": []
+        },
+        {
+          "name": "ChangeDate",
+          "slots": [
+            {
+              "name": "date",
+              "type": "AMAZON.DATE",
+              "samples": [
+                "{date}"
+              ]
+            }
+          ],
+          "samples": [
+            "change date to {date}",
+            "change my journey date",
+            "change my travel date",
+            "change date"
+          ]
+        }
+      ],
+      "types": [
+        {
+          "values": [
+            {
+              "name": {
+                "value": "B",
+                "synonyms": [
+                  "business"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "E",
+                "synonyms": [
+                  "eco",
+                  "economy"
+                ]
+              }
+            }
+          ],
+          "name": "class_type"
+        },
+        {
+          "values": [
+            {
+              "name": {
+                "value": "BOM",
+                "synonyms": [
+                  "mumbai",
+                  "bombay"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "MAA",
+                "synonyms": [
+                  "madras",
+                  "chennai"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "COK",
+                "synonyms": [
+                  "ernakulam",
+                  "kochi"
+                ]
+              }
+            }
+          ],
+          "name": "AMAZON.City"
+        }
+      ]
+    },
+    "dialog": {
+      "intents": [
+        {
+          "name": "BookFlight",
+          "confirmationRequired": false,
+          "slots": [
+            {
+              "name": "date",
+              "type": "AMAZON.DATE",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.50579511021.715544185158"
+              }
+            },
+            {
+              "name": "fromcity",
+              "type": "AMAZON.City",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.50579511021.1355590993485"
+              }
+            },
+            {
+              "name": "tocity",
+              "type": "AMAZON.City",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.50579511021.535058324351"
+              }
+            },
+            {
+              "name": "class",
+              "type": "class_type",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.101860538341.823725880102"
+              }
+            }
+          ]
+        },
+        {
+          "name": "ChangeDate",
+          "confirmationRequired": false,
+          "slots": [
+            {
+              "name": "date",
+              "type": "AMAZON.DATE",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.1138179966248.801977506423"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "prompts": [
+      {
+        "id": "Elicit.Slot.101860538341.823725880102",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "would to like to travel in economy or business class"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.50579511021.715544185158",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "when would you like to travel"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.50579511021.1355590993485",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "from which city are you travelling"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.50579511021.535058324351",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "can you tell me the destination city"
+          },
+          {
+            "type": "PlainText",
+            "value": "where are you travelling to"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.1138179966248.801977506423",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "please provide valid date"
+          }
+        ]
+      }
+    ]
+  }
+}
